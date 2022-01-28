@@ -1,5 +1,4 @@
 /*
-*
 * The Microwave program lets the user enter the food they want to heat up and how
 * many of the items they want, then gives them the time they need to heat the items up.
 *
@@ -16,9 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
 * This is the statistics program.
@@ -26,9 +23,7 @@ import java.util.Map;
 final class Statistics {
 
     /**
-    * Prevent instantiation
-    * Throw an exception IllegalStateException.
-    * if this ever is called
+    * Prevent instantiation.
     *
     * @throws IllegalStateException
     *
@@ -69,7 +64,8 @@ final class Statistics {
             final int numberOfMedian2 = numbersOfNumbers / 2;
             final int median2 = arrayOfIntegers[numberOfMedian2];
             returnValue = (median1 + median2) / 2;
-        } else {
+        }
+        else {
             final int numberOfMedian = (int) (
                 ((double) numbersOfNumbers / 2.0) + 0.5);
             returnValue = arrayOfIntegers[numberOfMedian];
@@ -99,7 +95,8 @@ final class Statistics {
                 maxCount = count;
                 modes.clear();
                 modes.add(0, comparing1);
-            } else if (count == maxCount) {
+            }
+            else if (count == maxCount) {
                 if (comparing1 != modes.get(0)) {
                     modes.add(0, comparing1);
                 }
@@ -126,7 +123,8 @@ final class Statistics {
                 tempNumber = Integer.parseInt(line);
                 listOfNumbers.add(tempNumber);
             }
-        } catch (IOException errorCode) {
+        }
+        catch (IOException errorCode) {
             System.err.println(errorCode);
         }
 
